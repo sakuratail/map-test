@@ -1,17 +1,23 @@
-window.initMap = () => {
+var map;
+var tokyo;
+var osaka;
 
-    let map;
+function initMap() {
+  tokyo = new google.maps.LatLng(35.689614,139.691585);
+  osaka = new google.maps.LatLng(34.686272,135.519649);
 
-    const area = document.getElementById("map"); // マップを表示させるHTMLの箱
-    // マップの中心位置(例:原宿駅)
-    const center = {
-      lat: 35.667379,
-      lng: 139.7054965
-    };
+  var opts = {
+    zoom: 15,
+    center: tokyo
+  };
 
-    //マップ作成
-    map = new google.maps.Map(area, {
-      center,
-      zoom: 17,
-    });
-  }
+  map = new google.maps.Map(document.getElementById("map"), opts);
+}
+
+function setTokyo() {
+  map.setCenter(tokyo);
+}
+
+function setOsaka() {
+  map.setCenter(osaka);
+}

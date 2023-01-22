@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAP Test</title>
-  <link rel='stylesheet' href='./style.css'>
+  <link rel='stylesheet' href='style.css'>
 </head>
 <body>
 <div class="map-wrap">
   <div id="map" class="map"></div>
 </div>
-<script src="./script.js"></script>
+<form>
+  <p>
+  <input type="button" value="東京" onclick="setTokyo()">
+  <input type="button" value="大阪" onclick="setOsaka()">
+  </p>
+</form>
+<script type="text/javascript" src="script.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNrmHD8OJGsy8fL_3Pz2EBktMNJDDzZn0&callback=initMap" async defer></script>
 </body>
 </html>
