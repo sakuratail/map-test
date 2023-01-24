@@ -1,3 +1,17 @@
+var map;
+var tokyo;
+
+function initMap() {
+  tokyo = new google.maps.LatLng(35.689614,139.691585);
+
+  var opts = {
+    zoom: 15,
+    center: tokyo
+  };
+
+  map = new google.maps.Map(document.getElementById("map"), opts);
+}
+
 function getMyPlace() {
   var output = document.getElementById("result");
   if (!navigator.geolocation){//Geolocation apiがサポートされていない場合
