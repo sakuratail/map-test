@@ -6,17 +6,9 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <p>東京都庁と大阪府庁</p>
-
     <div id="map"></div>
-
-    <form>
-    <p>
-    <input type="button" value="東京" onclick="setTokyo()">
-    <input type="button" value="大阪" onclick="setOsaka()">
-    </p>
-    </form>
+    <div id="result"></div>
+    <p><button onclick="getMyPlace()">現在位置を取得</button></p>
 
     <script type="text/javascript" src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNrmHD8OJGsy8fL_3Pz2EBktMNJDDzZn0&callback=initMap" async defer></script>
